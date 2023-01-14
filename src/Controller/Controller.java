@@ -9,7 +9,7 @@ public class Controller implements Runnable{
 
     private Thread thread;
     private boolean running = false;
-
+    int millisecondsPerFrame = 250;
 
     public Controller(Model m, View v) {
         this.model = m;
@@ -43,7 +43,7 @@ public class Controller implements Runnable{
         long lastUpdate = startTime;
         while (true) {
             view.draw(model.getShapes());
-            if (System.currentTimeMillis()-lastUpdate > 500) {
+            if (System.currentTimeMillis()-lastUpdate > millisecondsPerFrame) {
                 model.update();
                 lastUpdate = System.currentTimeMillis();
             }
