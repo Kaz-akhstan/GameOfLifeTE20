@@ -9,7 +9,7 @@ public class Controller implements Runnable{
 
     private Thread thread;
     private boolean running = false;
-    int millisecondsPerFrame = 250;
+    int millisecondsPerFrame = 200;
 
     public Controller(Model m, View v) {
         this.model = m;
