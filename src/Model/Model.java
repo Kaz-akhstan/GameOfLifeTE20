@@ -59,6 +59,9 @@ public class Model {
                                 neighbours++;
                             }
                         }
+                        else {
+                            if(che)
+                        }
                     }
                 }
                 if(currentGrid[X][Y].isAlive())
